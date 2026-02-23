@@ -6,20 +6,17 @@ namespace QuantityMeasurementApp
     {
         public static void Main(string[] args)
         {
-            double inch1 = 1.0;
-            double inch2 = 1.0;
+            QuantityLength q1 = new QuantityLength(1.0, LengthUnit.Feet);
+            QuantityLength q2 = new QuantityLength(12.0, LengthUnit.Inch);
 
-            double feet1 = 1.0;
-            double feet2 = 1.0;
+            Console.WriteLine($"Input: {q1} and {q2}");
+            Console.WriteLine($"Output: Equal ({q1.Equals(q2).ToString().ToLower()})");
 
-            bool inchResult = Equality.CheckInchesEquality(inch1, inch2);
-            bool feetResult = Equality.CheckFeetEquality(feet1, feet2);
+            QuantityLength q3 = new QuantityLength(1.0, LengthUnit.Inch);
+            QuantityLength q4 = new QuantityLength(1.0, LengthUnit.Inch);
 
-            Console.WriteLine($"Input: {inch1} inch and {inch2} inch");
-            Console.WriteLine($"Output: Equal ({inchResult.ToString().ToLower()})");
-
-            Console.WriteLine($"Input: {feet1} ft and {feet2} ft");
-            Console.WriteLine($"Output: Equal ({feetResult.ToString().ToLower()})");
+            Console.WriteLine($"Input: {q3} and {q4}");
+            Console.WriteLine($"Output: Equal ({q3.Equals(q4).ToString().ToLower()})");
         }
     }
 }
