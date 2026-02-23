@@ -2,32 +2,24 @@ using System;
 
 namespace QuantityMeasurementApp
 {
-    public class QuantityMeasurementAppMain
+    public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter first value in feet:");
-            string input1 = Console.ReadLine();
+            double inch1 = 1.0;
+            double inch2 = 1.0;
 
-            Console.WriteLine("Enter second value in feet:");
-            string input2 = Console.ReadLine();
+            double feet1 = 1.0;
+            double feet2 = 1.0;
 
-            if (!double.TryParse(input1, out double value1) ||
-                !double.TryParse(input2, out double value2))
-            {
-                Console.WriteLine("Invalid input. Please enter numeric values.");
-                return;
-            }
+            bool inchResult = Equality.CheckInchesEquality(inch1, inch2);
+            bool feetResult = Equality.CheckFeetEquality(feet1, feet2);
 
-            Feet feet1 = new Feet(value1);
-            Feet feet2 = new Feet(value2);
+            Console.WriteLine($"Input: {inch1} inch and {inch2} inch");
+            Console.WriteLine($"Output: Equal ({inchResult.ToString().ToLower()})");
 
-            EqualityChecker checker = new EqualityChecker();
-
-            bool result = checker.AreEqual(feet1, feet2);
-
-            Console.WriteLine($"Input: {value1} ft and {value2} ft");
-            Console.WriteLine($"Output: Equal ({result.ToString().ToLowerInvariant()})");
+            Console.WriteLine($"Input: {feet1} ft and {feet2} ft");
+            Console.WriteLine($"Output: Equal ({feetResult.ToString().ToLower()})");
         }
     }
 }

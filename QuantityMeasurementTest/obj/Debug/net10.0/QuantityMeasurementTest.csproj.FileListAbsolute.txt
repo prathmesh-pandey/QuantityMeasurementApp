@@ -162,3 +162,4 @@ C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurementTest\obj\Debu
 C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurementTest\obj\Debug\net10.0\QuantityMeasurementTest.pdb
 C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurementTest\obj\Debug\net10.0\QuantityMeasurementTest.genruntimeconfig.cache
 C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurementTest\obj\Debug\net10.0\ref\QuantityMeasurementTest.dll
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurementTest\obj\Debug\net10.0\QuantityMeasurementTest.sourcelink.json

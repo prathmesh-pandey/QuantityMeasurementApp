@@ -1,69 +1,47 @@
 ﻿using NUnit.Framework;
-using QuantityMeasurementApp;  
-namespace QuantityMeasurementApp 
+using QuantityMeasurementApp;
+
+namespace QuantityMeasurementTest
 {
     [TestFixture]
-    public class FeetTests
-    {   
-        private EqualityChecker checker;
-
-        [SetUp]
-        public void Setup()
+    public class UC2Tests
+    {
+        [Test]
+        public void TestFeetEquality_SameValue()
         {
-            checker = new EqualityChecker();
+            Assert.That(Equality.CheckFeetEquality(1.0, 1.0), Is.True);
         }
 
         [Test]
-        public void TestEquality_SameValue()
+        public void TestFeetEquality_DifferentValue()
         {
-            Feet f1 = new Feet(1.0);
-            Feet f2 = new Feet(1.0);
-
-            bool result = checker.AreEqual(f1, f2);
-
-            Assert.That(result, Is.True);
+            Assert.That(Equality.CheckFeetEquality(1.0, 2.0), Is.False);
         }
 
         [Test]
-        public void TestEquality_DifferentValue()
+        public void TestInchesEquality_SameValue()
         {
-            Feet f1 = new Feet(1.0);
-            Feet f2 = new Feet(2.0);
-
-            bool result = checker.AreEqual(f1, f2);
-
-            Assert.That(result, Is.False);
+            Assert.That(Equality.CheckInchesEquality(1.0, 1.0), Is.True);
         }
 
         [Test]
-        public void TestEquality_NullComparison()
+        public void TestInchesEquality_DifferentValue()
         {
-            Feet f1 = new Feet(1.0);
-
-            bool result = checker.AreEqual(f1, null);
-
-            Assert.That(result, Is.False);
+            Assert.That(Equality.CheckInchesEquality(1.0, 2.0), Is.False);
         }
 
         [Test]
-        public void TestEquality_SameReference()
+        public void TestInchesEquality_NullComparison()
         {
-            Feet f1 = new Feet(1.0);
-
-            bool result = checker.AreEqual(f1, f1);
-
-            Assert.That(result, Is.True);
+            Inches i = new Inches(1.0);
+            Assert.That(i.Equals(null), Is.False);
         }
 
         [Test]
-        public void TestEquality_DifferentObjectType()
+        public void TestFeetEquality_SameReference()
         {
-            Feet f1 = new Feet(1.0);
-            object obj = new object();
-
-            bool result = f1.Equals(obj);
-
-            Assert.That(result, Is.False);
+            Feet f = new Feet(1.0);
+            Assert.That(f.Equals(f), Is.True);
         }
     }
 }

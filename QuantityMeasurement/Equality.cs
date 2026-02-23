@@ -1,15 +1,23 @@
+using System;
+
 namespace QuantityMeasurementApp
 {
-public class EqualityChecker
-{
-    public bool AreEqual(Feet first, Feet second)
+    public static class Equality
     {
-        if (first == null)
-            return false;
-        if (second == null)
-            return false;
+        public static bool CheckFeetEquality(double value1, double value2)
+        {
+            Feet f1 = new Feet(value1);
+            Feet f2 = new Feet(value2);
 
-        return first.Equals(second);
+            return f1.Equals(f2);
+        }
+
+        public static bool CheckInchesEquality(double value1, double value2)
+        {
+            Inches i1 = new Inches(value1);
+            Inches i2 = new Inches(value2);
+
+            return i1.Equals(i2);
+        }
     }
-}
 }
