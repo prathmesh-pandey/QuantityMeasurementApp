@@ -1,0 +1,15 @@
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\bin\Debug\net10.0\QuantityMeasurement.exe
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\bin\Debug\net10.0\QuantityMeasurement.deps.json
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\bin\Debug\net10.0\QuantityMeasurement.runtimeconfig.json
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\bin\Debug\net10.0\QuantityMeasurement.dll
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\bin\Debug\net10.0\QuantityMeasurement.pdb
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.AssemblyInfoInputs.cache
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.AssemblyInfo.cs
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.csproj.CoreCompileInputs.cache
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.dll
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\refint\QuantityMeasurement.dll
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.pdb
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.genruntimeconfig.cache
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\ref\QuantityMeasurement.dll
+C:\Users\Pratham\Desktop\QuantityMeasurementApp\QuantityMeasurement\obj\Debug\net10.0\QuantityMeasurement.sourcelink.json
