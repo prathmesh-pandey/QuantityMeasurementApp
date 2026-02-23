@@ -12,6 +12,9 @@ namespace QuantityMeasurementApp
             if (double.IsNaN(value) || double.IsInfinity(value))
                 throw new ArgumentException("Invalid numeric value");
 
+            if (!Enum.IsDefined(typeof(LengthUnit), unit))
+                throw new ArgumentException("Invalid unit type");
+
             this.value = value;
             this.unit = unit;
         }
