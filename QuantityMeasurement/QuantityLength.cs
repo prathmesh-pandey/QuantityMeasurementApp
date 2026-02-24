@@ -83,12 +83,15 @@ namespace QuantityMeasurementApp
         }
 
         public static QuantityLength Add(
-            QuantityLength first,
-            QuantityLength second,
-            LengthUnit targetUnit)
+    QuantityLength first,
+    QuantityLength second,
+    LengthUnit targetUnit)
         {
-            if (first == null || second == null)
-                throw new ArgumentException("Operands cannot be null");
+            if (first == null)
+                throw new ArgumentException("First operand cannot be null");
+
+            if (second == null)
+                throw new ArgumentException("Second operand cannot be null");
 
             if (!Enum.IsDefined(typeof(LengthUnit), targetUnit))
                 throw new ArgumentException("Invalid target unit");
