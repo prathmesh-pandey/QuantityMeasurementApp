@@ -70,6 +70,34 @@ namespace QuantityMeasurementApp
             double convertedValue = Convert(this.value, this.unit, target);
             return new QuantityLength(convertedValue, target);
         }
+        public QuantityLength Add(QuantityLength other)
+        {
+            if (other == null)
+                throw new ArgumentException("Second operand cannot be null");
 
+            double baseSum = this.ToBase() + other.ToBase();
+
+            double resultValue = baseSum / this.unit.ToBaseUnit();
+
+            return new QuantityLength(resultValue, this.unit);
+        }
+
+        public static QuantityLength Add(
+            QuantityLength first,
+            QuantityLength second,
+            LengthUnit targetUnit)
+        {
+            if (first == null || second == null)
+                throw new ArgumentException("Operands cannot be null");
+
+            if (!Enum.IsDefined(typeof(LengthUnit), targetUnit))
+                throw new ArgumentException("Invalid target unit");
+
+            double baseSum = first.ToBase() + second.ToBase();
+
+            double resultValue = baseSum / targetUnit.ToBaseUnit();
+
+            return new QuantityLength(resultValue, targetUnit);
+        }
     }
 }
