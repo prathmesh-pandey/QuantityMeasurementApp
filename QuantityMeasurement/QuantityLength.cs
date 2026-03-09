@@ -21,7 +21,7 @@ namespace QuantityMeasurementApp
 
         public double ToBase()
         {
-            return value * unit.ToBaseUnit();
+            return unit.ConvertToBaseUnit(value);
         }
 
         public override bool Equals(object? obj)
@@ -59,10 +59,9 @@ namespace QuantityMeasurementApp
 
             if (source == target)
                 return value;
+            double baseValue = source.ConvertToBaseUnit(value);
 
-            double baseValue = value * source.ToBaseUnit();
-
-            return baseValue / target.ToBaseUnit();
+            return target.ConvertFromBaseUnit(baseValue);
         }
 
         public QuantityLength ConvertTo(LengthUnit target)
@@ -77,8 +76,7 @@ namespace QuantityMeasurementApp
 
             double baseSum = this.ToBase() + other.ToBase();
 
-            double resultValue = baseSum / this.unit.ToBaseUnit();
-
+            double resultValue = this.unit.ConvertFromBaseUnit(baseSum);
             return new QuantityLength(resultValue, this.unit);
         }
 
@@ -98,8 +96,7 @@ namespace QuantityMeasurementApp
 
             double baseSum = first.ToBase() + second.ToBase();
 
-            double resultValue = baseSum / targetUnit.ToBaseUnit();
-
+            double resultValue = targetUnit.ConvertFromBaseUnit(baseSum);
             return new QuantityLength(resultValue, targetUnit);
         }
     }
