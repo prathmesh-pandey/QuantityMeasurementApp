@@ -33,6 +33,37 @@ namespace QuantityMeasurementApp
             QuantityLength e2 = new QuantityLength(0.0, LengthUnit.Inch);
 
             Console.WriteLine($"5 ft + 0 in = {e1.Add(e2)}");
+
+            Console.WriteLine("\n UC9 Weight Equality ");
+
+            QuantityWeight w1 = new QuantityWeight(1.0, WeightUnit.Kilogram);
+            QuantityWeight w2 = new QuantityWeight(1000.0, WeightUnit.Gram);
+
+            Console.WriteLine($"1 kg == 1000 g → {w1.Equals(w2)}");
+
+            QuantityWeight w3 = new QuantityWeight(1.0, WeightUnit.Kilogram);
+            QuantityWeight w4 = new QuantityWeight(2.20462, WeightUnit.Pound);
+
+            Console.WriteLine($"1 kg == 2.20462 lb → {w3.Equals(w4)}");
+
+            Console.WriteLine("\n UC9 Weight Conversion ");
+
+            QuantityWeight cc1 = new QuantityWeight(1.0, WeightUnit.Kilogram);
+
+            Console.WriteLine($"1 kg → grams = {w2.ConvertTo(WeightUnit.Gram)}");
+            Console.WriteLine($"1 kg → pounds = {w4.ConvertTo(WeightUnit.Pound)}");
+
+            Console.WriteLine("\n UC9 Weight Addition ");
+
+            QuantityWeight aa1 = new QuantityWeight(1.0, WeightUnit.Kilogram);
+            QuantityWeight aa2 = new QuantityWeight(1000.0, WeightUnit.Gram);
+
+            Console.WriteLine($"1 kg + 1000 g = {a1.Add(a2)}");
+
+            QuantityWeight p1 = new QuantityWeight(1.0, WeightUnit.Pound);
+            QuantityWeight p2 = new QuantityWeight(453.592, WeightUnit.Gram);
+
+            Console.WriteLine($"1 lb + 453.592 g = {p1.Add(p2)}");
         }
     }
 }
